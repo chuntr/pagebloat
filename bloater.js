@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name         widenBlocks
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       Christopher Hunter <chunter@denormal.org>
-// @match        http://*.readthedocs.org/*
-// @match        http://stackexchange.com/*
-// @match        http://*.stackexchange.com/*
-// @match        http://stackoverflow.com/*
-// @match        http://serverfault.com/*
-// @grant        none
+// @name        bloater
+// @namespace   http://tampermonkey.net/
+// @version     0.2
+// @updateURL   https://raw.githubusercontent.com/chuntr/pagebloat/master/bloater.js
+// @description Tampermonkey script that resizes the default column widths for some popular sites to take advantage of wider monitors
+// @match       http://*.readthedocs.org/*
+// @match       http://stackexchange.com/*
+// @match       http://*.stackexchange.com/*
+// @match       http://stackoverflow.com/*
+// @match       http://serverfault.com/*
+// @grant       none
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
