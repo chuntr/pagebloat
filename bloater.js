@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        bloater
-// @namespace   http://tampermonkey.net/
-// @version     0.2
+// @namespace   http://github.com/chuntr/
+// @version     0.2.1
 // @updateURL   https://raw.githubusercontent.com/chuntr/pagebloat/master/bloater.js
 // @description Tampermonkey script that resizes the default column widths for some popular sites to take advantage of wider monitors
 // @match       http://*.readthedocs.org/*
