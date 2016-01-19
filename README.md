@@ -3,7 +3,8 @@ A script for Tampermonkey that will resize the default page widths to take full 
 
 # Currently supported sites:
 
-readthedocs.org
-stackexchange.com
-stackoverflow.com
-serverfault.com
+* readthedocs.org
+* stackexchange.com
+* *.stackexchange.com
+* stackoverflow.com
+* serverfault.com
