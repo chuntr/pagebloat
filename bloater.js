@@ -11,6 +11,7 @@
 // @match       http://*.stackexchange.com/*
 // @match       http://stackoverflow.com/*
 // @match       http://serverfault.com/*
+// @require     http://code.jquery.com/jquery-latest.js
 // @grant       none
 // ==/UserScript==
 /* jshint -W097 */
