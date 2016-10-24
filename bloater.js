@@ -3,7 +3,7 @@
 // @author      Christopher Hunter
 // @namespace   http://github.com/chuntr/
 // @source      https://github.com/chuntr/pagebloat
-// @version     0.3.01
+// @version     0.3.02
 // @updateURL   https://raw.githubusercontent.com/chuntr/pagebloat/master/bloater.js
 // @description Tampermonkey script that resizes the default column widths for some popular sites to take advantage of wider monitors
 // @match       http://github.com/*
@@ -57,4 +57,5 @@ setWidthById("1000px","answers");
 
 // github/git.corp
 setHeightByClassName("509","ace_editor");
+setHeightByClassName("509","ace-github-light");
 setHeightByClassName("509","ace_content");
