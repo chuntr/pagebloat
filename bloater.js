@@ -3,9 +3,11 @@
 // @author      Christopher Hunter
 // @namespace   http://github.com/chuntr/
 // @source      https://github.com/chuntr/pagebloat
-// @version     0.2.10
+// @version     0.2.11
 // @updateURL   https://raw.githubusercontent.com/chuntr/pagebloat/master/bloater.js
 // @description Tampermonkey script that resizes the default column widths for some popular sites to take advantage of wider monitors
+// @match       http://github.com/*
+// @match       http://git.corp.*/*
 // @match       http://*.readthedocs.org/*
 // @match       http://stackexchange.com/*
 // @match       http://*.stackexchange.com/*
@@ -29,6 +31,13 @@ function setWidthByClassName(width,className){
         elements[i].style.width = width;
     }
 }
+function setHeightByClassName(width,className){
+    var elements = document.getElementsByClassName(className);
+    for (var i=0; i<elements.length; i++){
+        elements[i].setAttribute("style","height:"+height+";");
+        elements[i].style.height = height;
+    }
+}
 function setWidthById(width,id){
     var element = document.getElementById(id);
     element.setAttribute("style","width:"+width+";");
@@ -45,3 +54,7 @@ setWidthById("1100px","mainbar");
 setWidthById("1100px","question");
 setWidthByClassName("1000px","post-text");
 setWidthById("1000px","answers");
+
+// github/git.corp
+setHeightByClassName("509","ace_editor");
+setHeightByClassName("509","ace_content");
