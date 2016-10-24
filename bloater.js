@@ -56,6 +56,7 @@ setWidthByClassName("1000px","post-text");
 setWidthById("1000px","answers");
 
 // github/git.corp
+setHeightByClassName("1000","main-content");
 setHeightByClassName("509","ace_editor");
 setHeightByClassName("509","ace-github-light");
 setHeightByClassName("509","ace_content");
