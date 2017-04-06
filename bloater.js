@@ -14,6 +14,7 @@
 // @match       http://stackoverflow.com/*
 // @match       http://serverfault.com/*
 // @require     http://code.jquery.com/jquery-latest.js
+// @match       https://jira.bigfish.lan/*
 // @grant       none
 // ==/UserScript==
 /* jshint -W097 */
@@ -43,13 +44,17 @@ function setWidthById(width,id){
     element.setAttribute("style","width:"+width+";");
     element.style.width = width;
 }
+function setFontSizeById(newSize,id){
+    var element = document.getElementById(id);
+    element.setAttribute("style","font-size:"+newSize+";");
+}
 
 // readthedocs.org
 jQsetWidthByClassName(1024,"div.rst-content");
 jQsetMaxWidthByClassName("1128px","div.wy-nav-content");
 
 // stackexchange
-setWidthById("1400px","content");
+setWidthById("1100px","content");
 setWidthById("1100px","mainbar");
 setWidthById("1100px","question");
 setWidthByClassName("1000px","post-text");
@@ -60,3 +65,9 @@ setHeightByClassName("1000","main-content");
 setHeightByClassName("509","ace_editor");
 setHeightByClassName("509","ace-github-light");
 setHeightByClassName("509","ace_content");
+setWidthByClassName("1100px","post-cell");
+setWidthById("1100px","answers");
+
+// jira
+setWidthById("15%","viewissuesidebar");
+//setFontSizeById("70%","viewissuesidebar");
