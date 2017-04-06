@@ -1,9 +1,10 @@
+
 // ==UserScript==
 // @name        bloater
 // @author      Christopher Hunter
 // @namespace   http://github.com/chuntr/
 // @source      https://github.com/chuntr/pagebloat
-// @version     0.3.05
+// @version     0.3.06
 // @updateURL   https://raw.githubusercontent.com/chuntr/pagebloat/master/bloater.js
 // @description Tampermonkey script that resizes the default column widths for some popular sites to take advantage of wider monitors
 // @match       http://github.com/*
@@ -39,18 +40,22 @@ function setHeightByClassName(height,className){
         elements[i].style.height = height;
     }
 }
-function setMarginsByClassName(marginLeft,marginRight,className);
-    var element = document.getElementsByClassName(className);
+function setMarginsByClassName(marginLeft,marginRight,className){
+    var elements = document.getElementsByClassName(className);
     for (var i=0; i<elements.length; i++){
         elements[i].setAttribute("style","margin-left:"+marginLeft+";");
         elements[i].setAttribute("style","margin-right:"+marginRight+";");
-        elements[i].style.height = height;
     }
+}
+function setStyleAttributeById(attributeName,value,id){
+    var element = document.getElementById(id);
+    element.setAttribute("style",attributeName+":"+value+";");
 }
 function setWidthById(width,id){
     var element = document.getElementById(id);
     element.setAttribute("style","width:"+width+";");
     element.style.width = width;
+}
 function setFontSizeById(newSize,id){
     var element = document.getElementById(id);
     element.setAttribute("style","font-size:"+newSize+";");
@@ -65,8 +70,12 @@ setWidthById("1100px","content");
 setWidthById("1100px","mainbar");
 setWidthById("1100px","question");
 setWidthByClassName("1100px","post-text");
+setMarginsByClassName("0","0","content");
 setWidthById("1000px","answers");
 setWidthById("1200px", "content");
+setStyleAttributeById("margin-left","0","content");
+setStyleAttributeById("margin-right","0","content");
+setStyleAttributeById("width","1500px","content");
 
 // github/git.corp
 setHeightByClassName("1000","main-content");
