@@ -3,7 +3,7 @@
 // @author      Christopher Hunter
 // @namespace   http://github.com/chuntr/
 // @source      https://github.com/chuntr/pagebloat
-// @version     0.3.04
+// @version     0.3.05
 // @updateURL   https://raw.githubusercontent.com/chuntr/pagebloat/master/bloater.js
 // @description Tampermonkey script that resizes the default column widths for some popular sites to take advantage of wider monitors
 // @match       http://github.com/*
