@@ -39,11 +39,18 @@ function setHeightByClassName(height,className){
         elements[i].style.height = height;
     }
 }
+function setMarginsByClassName(marginLeft,marginRight,className);
+    var element = document.getElementsByClassName(className);
+    for (var i=0; i<elements.length; i++){
+        elements[i].setAttribute("style","margin-left:"+marginLeft+";");
+        elements[i].setAttribute("style","margin-right:"+marginRight+";");
+        elements[i].style.height = height;
+    }
+}
 function setWidthById(width,id){
     var element = document.getElementById(id);
     element.setAttribute("style","width:"+width+";");
     element.style.width = width;
-}
 function setFontSizeById(newSize,id){
     var element = document.getElementById(id);
     element.setAttribute("style","font-size:"+newSize+";");
@@ -57,8 +64,9 @@ jQsetMaxWidthByClassName("1128px","div.wy-nav-content");
 setWidthById("1100px","content");
 setWidthById("1100px","mainbar");
 setWidthById("1100px","question");
-setWidthByClassName("1000px","post-text");
+setWidthByClassName("1100px","post-text");
 setWidthById("1000px","answers");
+setWidthById("1200px", "content");
 
 // github/git.corp
 setHeightByClassName("1000","main-content");
