@@ -9,6 +9,7 @@
 // @description Tampermonkey script that resizes the default column widths for some popular sites to take advantage of wider monitors
 // @match       http://github.com/*
 // @match       http://git.corp.*.*/*
+// @match       https://git.corp.*.*/*
 // @match       http://*.readthedocs.org/*
 // @match       http://stackexchange.com/*
 // @match       http://*.stackexchange.com/*
